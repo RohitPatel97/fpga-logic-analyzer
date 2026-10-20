@@ -1,0 +1,27 @@
+name: Capture and viewer tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Icarus
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+      - name: Test Python and RTL
+        run: python scripts/verify.py
+      - name: Fetch pinned Renode
+        run: |
+          mkdir -p build/tools/renode
+          curl -fL https://github.com/renode/renode/releases/download/v1.17.0/renode-1.17.0.linux-portable.tar.gz -o build/renode.tar.gz
+          echo '4ba7c68b59e2447f188ef4b4b112fcccd2802582c460beedceb63b84e5605a5f  build/renode.tar.gz' | sha256sum -c -
+          tar -xzf build/renode.tar.gz -C build/tools/renode
+      - name: Full virtual board capture
+        run: python scripts/run_demo.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: capture-evidence
+          path: captures/demo/

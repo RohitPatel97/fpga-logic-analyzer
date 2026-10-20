@@ -1,0 +1,67 @@
+test_bad_capture_does_not_overwrite_good_capture (test_capture.CaptureTests.test_bad_capture_does_not_overwrite_good_capture) ... ok
+test_corruption_is_detected (test_capture.CaptureTests.test_corruption_is_detected) ... ok
+test_csv_and_vcd_timing (test_capture.CaptureTests.test_csv_and_vcd_timing) ... ok
+test_empty_abort_and_no_trigger_are_valid (test_capture.CaptureTests.test_empty_abort_and_no_trigger_are_valid) ... ok
+test_json_and_database_preserve_samples_and_metadata (test_capture.CaptureTests.test_json_and_database_preserve_samples_and_metadata) ... ok
+test_validation_rejects_invalid_rate_width_trigger_and_samples (test_capture.CaptureTests.test_validation_rejects_invalid_rate_width_trigger_and_samples) ... ok
+test_channel_must_exist_in_capture (test_cli.CliTests.test_channel_must_exist_in_capture) ... ok
+test_digital_only_report_works_at_low_sample_rate (test_cli.CliTests.test_digital_only_report_works_at_low_sample_rate) ... ok
+test_required_trigger_and_integer_version (test_cli.CliTests.test_required_trigger_and_integer_version) ... ok
+test_sqlite_error_is_reported_cleanly (test_cli.CliTests.test_sqlite_error_is_reported_cleanly) ... ok
+test_monitor_quotes_spaces (test_renode_capture.MonitorArguments.test_monitor_quotes_spaces) ... ok
+test_monitor_rejects_multiline_arguments (test_renode_capture.MonitorArguments.test_monitor_rejects_multiline_arguments) ... ok
+test_all_512_samples_default_falling_trigger (test_renode_capture.RenodeIntegration.test_all_512_samples_default_falling_trigger) ... ok
+test_broken_simulator_image_fails_and_disposes (test_renode_capture.RenodeIntegration.test_broken_simulator_image_fails_and_disposes) ... ok
+test_divider_preserves_exact_samples_and_effective_rate (test_renode_capture.RenodeIntegration.test_divider_preserves_exact_samples_and_effective_rate) ... ok
+test_immediate_capture_needs_no_decoder (test_renode_capture.RenodeIntegration.test_immediate_capture_needs_no_decoder) ... ok
+test_missing_trigger_is_timeout_and_disposes (test_renode_capture.RenodeIntegration.test_missing_trigger_is_timeout_and_disposes) ... ok
+test_noninteger_settings_rejected_before_launch (test_renode_capture.RenodeIntegration.test_noninteger_settings_rejected_before_launch) ... ok
+test_virtual_clock_and_full_machine_reset (test_renode_capture.RenodeIntegration.test_virtual_clock_and_full_machine_reset) ... ok
+test_bad_stop_bit_is_reported (test_uart.UARTTests.test_bad_stop_bit_is_reported) ... ok
+test_basic_capture_decodes_expected_bytes (test_uart.UARTTests.test_basic_capture_decodes_expected_bytes) ... ok
+test_capture_starting_low_has_no_assumed_start_edge (test_uart.UARTTests.test_capture_starting_low_has_no_assumed_start_edge) ... ok
+test_empty_and_idle_capture (test_uart.UARTTests.test_empty_and_idle_capture) ... ok
+test_fractional_bit_period_and_back_to_back_frames (test_uart.UARTTests.test_fractional_bit_period_and_back_to_back_frames) ... ok
+test_glitch_before_real_frame_is_ignored (test_uart.UARTTests.test_glitch_before_real_frame_is_ignored) ... ok
+test_invalid_parameters_fail_clearly (test_uart.UARTTests.test_invalid_parameters_fail_clearly) ... ok
+test_nondefault_data_width_and_stop_bits (test_uart.UARTTests.test_nondefault_data_width_and_stop_bits) ... ok
+test_parity_good_and_bad (test_uart.UARTTests.test_parity_good_and_bad) ... ok
+test_selected_packed_channel (test_uart.UARTTests.test_selected_packed_channel) ... ok
+test_truncated_frame_does_not_invent_byte (test_uart.UARTTests.test_truncated_frame_does_not_invent_byte) ... ok
+test_empty_capture_exports (test_viewer.ViewerTests.test_empty_capture_exports) ... ok
+test_html_is_standalone_and_preserves_capture (test_viewer.ViewerTests.test_html_is_standalone_and_preserves_capture) ... ok
+test_html_preserves_full_64_bit_words_for_javascript (test_viewer.ViewerTests.test_html_preserves_full_64_bit_words_for_javascript) ... ok
+test_invalid_capture_or_decoder_parameters_fail (test_viewer.ViewerTests.test_invalid_capture_or_decoder_parameters_fail) ... ok
+test_report_decodes_uart_and_escapes_untrusted_text (test_viewer.ViewerTests.test_report_decodes_uart_and_escapes_untrusted_text) ... ok
+test_runs_preserve_transitions (test_viewer.ViewerTests.test_runs_preserve_transitions) ... ok
+test_windowed_runs_keep_original_sample_indices (test_viewer.ViewerTests.test_windowed_runs_keep_original_sample_indices) ... ok
+test_zoomed_out_envelope_preserves_single_sample_pulse (test_viewer.ViewerTests.test_zoomed_out_envelope_preserves_single_sample_pulse) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 25.041s
+
+OK
+PASS: 84 seeded RTL scenarios, 13541 register/sample checks, seed=1592594996
+Checking RTL capture and buffer...
+PASS immediate capture and frozen hold
+PASS circular wrap preserves chronological prehistory
+PASS early trigger extends posttrigger collection
+PASS one-sample first and last boundary
+PASS trigger in last capture slot
+PASS full-capacity wrapped capture
+PASS zero prehistory drops all pretrigger samples
+PASS divider samples every third input tick
+PASS rising edge mask and first-sample baseline
+PASS falling edge trigger
+PASS software trigger sampled at divider boundary
+PASS abort freezes prehistory without inventing trigger
+PASS abort before first sample
+PASS abort after trigger freezes partial capture
+PASS valid rearm clears error; empty level mask matches
+PASS: 15 capture scenarios plus configuration/reset checks
+C:\Users\sr116\Desktop\Resume\Projects\fpga-logic-analyzer\sim\tb_logic_analyzer.sv:267: $finish called at 37714000 (1ps)
+Running Renode virtual board with actual RTL...
+PASS: every captured sample and trigger position matched.
+PASS: UART 55 41 A3 0A; capture 1 persisted.
+Capture: C:\Users\sr116\Desktop\Resume\Projects\fpga-logic-analyzer\captures\verification\capture.json
+Waveforms: C:\Users\sr116\Desktop\Resume\Projects\fpga-logic-analyzer\captures\verification\waveforms.html

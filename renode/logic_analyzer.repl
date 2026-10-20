@@ -1,0 +1,3 @@
+// An FPGA acquisition board controlled by the Renode monitor, without an MCU.
+// Capture state and RAM live in the external Icarus RTL process.
+analyzer: Miscellaneous.LogicAnalyzer @ sysbus 0x40000000

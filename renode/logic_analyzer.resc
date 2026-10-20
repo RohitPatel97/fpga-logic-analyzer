@@ -1,0 +1,14 @@
+// Run from the project root. scripts/renode_capture.py generates an equivalent
+// absolute-path script and configures vvp for a portable, automated capture.
+include @renode/LogicAnalyzer.cs
+mach create "fpga-logic-analyzer"
+machine LoadPlatformDescription @renode/logic_analyzer.repl
+// Configure with absolute paths before using the board:
+// sysbus.analyzer Configure "C:/tools/iverilog/bin/vvp.exe" "C:/project/build/bridge.vvp"
+// sysbus WriteDoubleWord 0x40000000 1
+// sysbus.analyzer StartSource
+// emulation RunFor "0.001"
+// sysbus.analyzer StopSource
+// sysbus ReadDoubleWord 0x40000004
+// sysbus.analyzer DumpSamples
+// sysbus.analyzer Dispose

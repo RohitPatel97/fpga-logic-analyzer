@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "verified_utc": "2026-10-20T01:12:57.322454+00:00",
+  "sample_count": 512,
+  "trigger_index": 32,
+  "uart_bytes_hex": [
+    "55",
+    "41",
+    "A3",
+    "0A"
+  ],
+  "capture_id": 1,
+  "checks": [
+    "self-checking SystemVerilog testbench",
+    "Renode virtual-time RTL co-simulation",
+    "all 512 samples equal independent fixture",
+    "trigger index 32",
+    "UART 55 41 A3 0A",
+    "SQLite lossless roundtrip"
+  ],
+  "tools": {
+    "iverilog": "C:\\Users\\sr116\\Desktop\\Resume\\Projects\\fpga-logic-analyzer\\build\\tools\\mingw64\\bin\\iverilog.exe",
+    "vvp": "C:\\Users\\sr116\\Desktop\\Resume\\Projects\\fpga-logic-analyzer\\build\\tools\\mingw64\\bin\\vvp.exe",
+    "renode": "C:\\Users\\sr116\\Desktop\\Resume\\Projects\\stm32-networked-sensor-system\\build\\tools\\renode-1.17.0\\renode_1.17.0-portable\\renode.exe"
+  }
+}
